@@ -1,13 +1,16 @@
-import { useState } from "react";
 import Header from "../../components/header";
+import Perfil from "../../components/perfil";
+import bg from "../../assets/background_all.svg";
+
+import * as S from "./styles";
 
 function Dashboard() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
+    <S.Container>
       <Header />
-    </div>
+      <Perfil />
+      <img className="background-all" src={bg} />
+    </S.Container>
   );
 }
 

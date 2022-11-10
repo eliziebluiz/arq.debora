@@ -11,6 +11,7 @@ export const Header = styled.header`
   min-height: 6.563rem;
   text-align: center;
   width: 100%;
+  position: relative;
 
   > img {
     width: 3rem;
