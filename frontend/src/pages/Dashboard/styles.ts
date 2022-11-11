@@ -7,6 +7,6 @@ export const Container = styled.header`
 
   > .background-all {
     width: 100%;
-    margin-top: 3rem;
+    margin: 3rem  0rem;
   }
 `;
