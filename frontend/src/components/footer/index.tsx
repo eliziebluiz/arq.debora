@@ -5,7 +5,7 @@ import Pinterest from "../../assets/pinterest-p.svg";
 
 import * as S from "./styles";
 
-function Header() {
+function Footer() {
   return (
     <S.Footer>
       <img src={LogoWhite} alt="Logo Débora Caroline" />
@@ -42,4 +42,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Footer;
