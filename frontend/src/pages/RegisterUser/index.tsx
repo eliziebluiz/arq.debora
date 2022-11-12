@@ -3,7 +3,7 @@ import Input from "../../components/input";
 
 import * as S from "./styles";
 
-function Login() {
+function RegisterUser() {
   return (
     <Template>
       <Input placeholder="Nome" />
@@ -24,4 +24,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default RegisterUser;
