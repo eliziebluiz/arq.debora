@@ -3,10 +3,14 @@ import Input from "../../components/input";
 
 import * as S from "./styles";
 
-function ForgotPassword() {
+function ForgotPassword({ variant = "code" }) {
   return (
     <Template>
-      <Input placeholder="E-mail" />
+      {variant === "code" ? (
+        <Input placeholder="Code" />
+      ) : (
+        <Input placeholder="E-mail" />
+      )}
       <S.Button>Enviar</S.Button>
     </Template>
   );

@@ -10,6 +10,7 @@ const Router = () => (
       <Route path="/" element={<Dashboard />} />
       <Route path="/login" element={<Login />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/code" element={<ForgotPassword variant="code" />} />
       <Route path="/register-user" element={<RegisterUser />} />
     </Routes>
   </BrowserRouter>

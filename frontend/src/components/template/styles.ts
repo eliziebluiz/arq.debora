@@ -6,7 +6,8 @@ export const Container = styled.header`
   align-items: center;
   text-align: center;
   width: 100%;
-  justify-content: center;
+  height: 100%;
+  justify-content: space-between;
 `;
 
 export const Card = styled.div`
@@ -24,4 +25,11 @@ export const Card = styled.div`
     width: 8rem;
     margin-bottom: 3rem;
   }
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 `;
