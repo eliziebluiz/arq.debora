@@ -4,7 +4,7 @@ import * as S from "./styles";
 
 function Info() {
   return (
-    <S.Container>
+    <S.Container id="contacts">
       <img src={PerfilPhoto} alt="Logo Débora Caroline" />
       <S.Info>
         <S.Title>Acreditamos</S.Title>

@@ -4,7 +4,7 @@ import * as S from "./styles";
 
 function Perfil() {
   return (
-    <S.Container>
+    <S.Container id="home">
       <S.Info>
         <S.Title>Arquiteta Débora Caroline</S.Title>
         <S.Text>

@@ -30,12 +30,14 @@ export const List = styled.ul`
   display: flex;
   align-items: center;
 
-  > li + li {
+  > a + a {
     margin-left: 7rem;
   }
 `;
 
-export const Item = styled.li`
+export const Item = styled.a`
   color: ${({ active }: List) => (active ? "#933A0E" : "#000")};
   font-size: 1.125rem;
+  cursor: pointer;
+  text-decoration: none;
 `;
