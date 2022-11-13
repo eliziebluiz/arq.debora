@@ -1,10 +1,10 @@
-import Listing from "../Listing";
+import Listing from "../../components/listing";
 
 import * as S from "./styles";
 
-function ListSchedule() {
+function ListProjects() {
   return (
-    <Listing>
+    <Listing location="projects">
       <S.Title>
         <h4>Projetos</h4>
         <S.Button>Novo Projeto</S.Button>
@@ -18,4 +18,4 @@ function ListSchedule() {
   );
 }
 
-export default ListSchedule;
+export default ListProjects;

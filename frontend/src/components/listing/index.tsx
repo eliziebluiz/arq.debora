@@ -5,13 +5,14 @@ import Footer from "../../components/footer";
 import * as S from "./styles";
 
 interface ListingProps {
+  location?: string;
   children?: React.ReactNode;
 }
 
-function Listing({ children }: ListingProps) {
+function Listing({ location, children }: ListingProps) {
   return (
     <S.Container>
-      <Header />
+      <Header location={location} />
       <S.Card>{children}</S.Card>
       <Footer />
     </S.Container>
