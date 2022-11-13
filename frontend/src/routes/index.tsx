@@ -5,6 +5,7 @@ import ForgotPassword from "../pages/ForgotPassword";
 import RegisterUser from "../pages/RegisterUser";
 import RegisterSchedule from "../pages/RegisterSchedule";
 import RegisterContact from "../pages/RegisterContact";
+import RegisterProject from "../pages/RegisterProject";
 
 const Router = () => (
   <BrowserRouter>
@@ -16,6 +17,7 @@ const Router = () => (
       <Route path="/register-user" element={<RegisterUser />} />
       <Route path="/register-schedule" element={<RegisterSchedule />} />
       <Route path="/register-contact" element={<RegisterContact />} />
+      <Route path="/register-project" element={<RegisterProject />} />
     </Routes>
   </BrowserRouter>
 );
