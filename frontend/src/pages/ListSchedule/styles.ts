@@ -19,4 +19,5 @@ export const Item = styled.div`
   width: 200px;
   border-radius: 24px;
   background-color: #d9d9d9;
+  margin: 0px auto;
 `;
