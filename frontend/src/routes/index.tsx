@@ -6,6 +6,9 @@ import RegisterUser from "../pages/RegisterUser";
 import RegisterSchedule from "../pages/RegisterSchedule";
 import RegisterContact from "../pages/RegisterContact";
 import RegisterProject from "../pages/RegisterProject";
+import ListSchedule from "../pages/ListSchedule";
+import ListContact from "../pages/ListContact";
+import ListProjects from "../pages/ListProjects";
 
 const Router = () => (
   <BrowserRouter>
@@ -18,6 +21,9 @@ const Router = () => (
       <Route path="/register-schedule" element={<RegisterSchedule />} />
       <Route path="/register-contact" element={<RegisterContact />} />
       <Route path="/register-project" element={<RegisterProject />} />
+      <Route path="/list-schedule" element={<ListSchedule />} />
+      <Route path="/list-contact" element={<ListContact />} />
+      <Route path="/list-projects" element={<ListProjects />} />
     </Routes>
   </BrowserRouter>
 );
