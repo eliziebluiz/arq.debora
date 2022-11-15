@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from .models import List, Item
+from .models import List, Item, Project
 from rest_framework import serializers
 
 class UserSerializer(serializers.ModelSerializer):
@@ -34,3 +34,8 @@ class ListSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = List
         fields = ['name', 'owner', 'url', 'item_set']
+
+class ProjectSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Project
+        fields = ['name', 'type_property', 'status', 'category', 'location', 'type_project', 'with_one', 'with_two', 'description']

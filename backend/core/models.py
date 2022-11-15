@@ -17,3 +17,16 @@ class Item(models.Model):
     def __str__(self):
         return self.name
 
+class Project(models.Model):
+    name = models.CharField(max_length=50)
+    type_property = models.CharField(max_length=50)
+    status = models.CharField(max_length=50)
+    category = models.CharField(max_length=50)
+    location = models.CharField(max_length=50)
+    type_project = models.CharField(max_length=50)
+    with_one = models.CharField(max_length=50)
+    with_two = models.CharField(max_length=50)
+    description = models.TextField(max_length=500)
+
+    def __str__(self):
+        return self.name
