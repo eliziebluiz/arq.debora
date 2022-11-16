@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from .models import List, Item, Project
+from .models import *
 from rest_framework import serializers
 
 class UserSerializer(serializers.ModelSerializer):
@@ -24,18 +24,29 @@ class UserSerializer(serializers.ModelSerializer):
     user.save()
     return user
 
-class ItemSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Item
-        fields = ['name', 'done']
-
-class ListSerializer(serializers.HyperlinkedModelSerializer):
-    item_set = ItemSerializer(many=True)
-    class Meta:
-        model = List
-        fields = ['name', 'owner', 'url', 'item_set']
-
-class ProjectSerializer(serializers.HyperlinkedModelSerializer):
+class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = ['name', 'type_property', 'status', 'category', 'location', 'type_project', 'with_one', 'with_two', 'description']
+        fields = ['pk', 'type_property', 'status', 'category', 'location', 'type_project', 'with_one', 'with_two', 'description']
+
+class SchedulingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Scheduling
+        fields = ['user', 'pk', 'type_property', 'status', 'category', 'location','type_attendance', 'type_project', 'with_one', 'with_two'] 
+        extra_kwargs = {
+            'user': {'read_only': True}
+        }
+    def create(self, validated_data):
+        user = self.context['user']
+        scheduling = Scheduling.objects.create(user=user, **validated_data)
+        return scheduling
+
+class ContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Contact
+        fields = ['pk', 'title', 'description']
+
+class EmailCodeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = EmailCode
+        fields = ['date']
