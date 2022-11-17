@@ -4,6 +4,10 @@ interface List {
   active?: boolean;
 }
 
+interface Button {
+  isDisabled?: boolean;
+}
+
 export const Header = styled.header`
   display: flex;
   align-items: center;
@@ -11,7 +15,6 @@ export const Header = styled.header`
   min-height: 6.563rem;
   text-align: center;
   width: 100%;
-  position: relative;
 
   > img {
     width: 3rem;
@@ -24,7 +27,6 @@ export const List = styled.ul`
   list-style: none;
   margin-bottom: 0;
   width: 100%;
-  position: absolute;
   justify-content: center;
 
   display: flex;
@@ -40,4 +42,18 @@ export const Item = styled.a`
   font-size: 1.125rem;
   cursor: pointer;
   text-decoration: none;
+`;
+
+export const Button = styled.button`
+  font-size: 1.125rem;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: ${({ isDisabled }: Button) =>
+    isDisabled ? "red" : "#933a0e"};
+  color: #ffffff;
+  cursor: pointer;
+
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  margin-right: 7.688rem;
 `;

@@ -1,4 +1,6 @@
 import { useState, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
+
 import Template from "../../components/template";
 import Input from "../../components/input";
 
@@ -21,6 +23,7 @@ function RegisterUser() {
     phone: "",
     confirmPassword: "",
   });
+  const history = useNavigate();
 
   const handleChange = ({ target }: any) => {
     const { name, value } = target;
@@ -34,11 +37,13 @@ function RegisterUser() {
           full_name: form?.name,
           email: form?.email,
           password: form?.password,
-          username: form?.phone,
+          username: form?.email,
         };
         await api.post("core/user/", body);
+        alert("Usuário cadastrado com sucesso");
+        history("/login");
       } catch (error) {
-        console.log(error);
+        alert(error);
       }
     },
     [form]

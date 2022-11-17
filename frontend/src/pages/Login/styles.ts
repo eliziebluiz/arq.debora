@@ -7,9 +7,10 @@ export const Container = styled.header`
 `;
 
 export const ForgotPassword = styled.div`
+  display: flex;
   width: 100%;
-  text-align: right;
-  max-width: 20rem;
+  justify-content: space-between;
+  max-width: 22rem;
   margin-top: 1rem;
 
   > a {

@@ -31,7 +31,9 @@ function Login() {
       const response: LoginProps = await api.post("api-auth/", form);
       localStorage.setItem("token", response?.data?.token);
       history("/");
-    } catch (err) {}
+    } catch (err) {
+      alert("Credenciais invalidas");
+    }
   };
 
   return (
@@ -45,6 +47,7 @@ function Login() {
         onChange={handleChange}
       />
       <S.ForgotPassword>
+        <a href="/register-user">Cadastre-se</a>
         <a href="/forgot-password">Esqueceu sua senha ?</a>
       </S.ForgotPassword>
       <S.Button onClick={() => handleSubmit()}>Entrar</S.Button>
