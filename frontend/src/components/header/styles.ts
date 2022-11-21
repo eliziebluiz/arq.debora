@@ -21,6 +21,19 @@ export const Header = styled.header`
     height: 3rem;
     margin-left: 7.688rem;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    grid-gap: 1rem;
+    padding: 1rem 0rem;
+
+    > img {
+      margin-left: 0;
+    }
+    > button {
+      margin-right: 0;
+    }
+  }
 `;
 
 export const List = styled.ul`
@@ -34,6 +47,12 @@ export const List = styled.ul`
 
   > a + a {
     margin-left: 7rem;
+  }
+
+  @media (max-width: 768px) {
+    > a + a {
+      margin-left: 1rem;
+    }
   }
 `;
 

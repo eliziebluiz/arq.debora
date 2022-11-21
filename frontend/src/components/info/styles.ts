@@ -13,6 +13,15 @@ export const Container = styled.header`
     height: 22.5rem;
     margin-left: 7.688rem;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    grid-gap: 1rem;
+
+    > img {
+      margin-left: 0;
+    }
+  }
 `;
 
 export const Info = styled.div`
@@ -20,6 +29,11 @@ export const Info = styled.div`
   flex-direction: column;
   text-align: left;
   margin-left: 3rem;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+  padding: 0rem 2rem;
 `;
 
 export const Text = styled.p`
